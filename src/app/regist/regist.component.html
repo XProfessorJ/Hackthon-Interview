@@ -1,0 +1,18 @@
+<div>
+  <ion-item>
+    <ion-input placeholder={{contents?.placeholder_username}}></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder={{contents?.placeholder_password}} type='password'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder={{contents?.placeholder_password_again}} type='password'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder={{contents?.placeholder_phone_number}}></ion-input>
+    <ion-button color="primary" (click)="triggerOTP()">{{contents?.tag_otp}}</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder={{contents?.placeholder_OTP}}></ion-input>
+  </ion-item>
+</div>

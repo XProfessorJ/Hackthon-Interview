@@ -1,0 +1,20 @@
+{
+    "dashboard": {
+        "system_name": "InterView System",
+        "moto": "Life is like an anvil, the more it is struck, the more sparks it can emit.",
+        "login":"Login",
+        "regist":"Regist"
+    },
+    "login_dashboard": {
+        "placeholder_username": "UserName",
+        "placeholder_password": "Password"
+    },
+    "regist_dashboard": {
+        "placeholder_username": "UserName",
+        "placeholder_password": "Password",
+        "placeholder_password_again": "Password Again",
+        "placeholder_phone_number":"Phone Number",
+        "tag_otp":"OTP",
+        "placeholder_OTP":"OTP"
+    }
+}

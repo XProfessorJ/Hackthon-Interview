@@ -1,0 +1,31 @@
+<!-- <img slot="bottom" src='assets/pic/background-sea.jpeg'> -->
+<div class='daddy_justify_align'>
+  <div role='title_part'>
+    <p class='system_title'>{{contents?.system_name}}</p>
+    <h1>{{contents?.moto}}</h1>
+  </div>
+  <ion-tabs class='login_panel'>
+
+    <ion-tab-bar class='tab_bar' slot="bottom">
+      <ion-tab-button tab="login">
+        <ion-icon name="enter-outline"></ion-icon>
+        <ion-label>{{contents?.login}}</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="regist">
+        <ion-icon name="person-add-outline"></ion-icon>
+        <ion-label>{{contents?.regist}}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
+</div>
+<div role='fotter_part'>
+  <div class='content_toggle'>
+    <p (click)='contenToggle("cn")'>中文</p>
+    <p (click)='contenToggle("en")'>English</p>
+  </div>
+  <h6>
+    Team Member: 徐敏杰
+  </h6>
+</div>

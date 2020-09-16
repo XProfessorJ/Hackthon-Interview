@@ -1,0 +1,20 @@
+{
+    "dashboard": {
+        "system_name": "面试系统",
+        "moto": "人生就像铁砧，越敲越能发出火花。",
+        "login":"登陆",
+        "regist":"注册"
+    },
+    "login_dashboard": {
+        "placeholder_username": "用户名",
+        "placeholder_password": "密码"
+    },
+    "regist_dashboard": {
+        "placeholder_username": "用户名",
+        "placeholder_password": "密码",
+        "placeholder_password_again": "确认密码",
+        "placeholder_phone_number":"手机号",
+        "tag_otp":"发送",
+        "placeholder_OTP":"验证码"
+    }
+}

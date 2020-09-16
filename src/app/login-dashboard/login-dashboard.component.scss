@@ -1,0 +1,97 @@
+div[role=title_part] {
+    transform: translateY(-4rem);
+}
+
+.system_title {
+    font-size: xxx-large;
+    margin-top: 0;
+    color: #5284de;
+    font-weight: bold;
+}
+
+.login_panel {
+    height: 70%;
+    max-width: 500px;
+    width: 60%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: white;
+    position: relative;
+}
+
+.daddy_justify_align {
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+    align-items: center;
+    background: #f0f2f5;
+    justify-content: space-around;
+}
+
+div[role=fotter_part] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top: 75%;   
+}
+.content_toggle{
+    display: flex;
+}
+
+ion-tab-bar {
+    border: 0;
+}
+
+ion-tab-button {
+    border-radius: 0.5rem;
+    margin: 0 1rem;
+}
+
+.content_toggle>p{
+    margin: 0 0.5rem;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .daddy_justify_align{
+        flex-direction: column;
+        justify-content: center;
+    }
+    div[role=title_part] {
+        transform: translateY(0);
+    }
+    .system_title{
+        font-size: x-large;
+    }
+    div>h1{
+        display: none;
+    }
+    ion-tab-bar {
+        flex-direction: column;
+        height: 20%;
+    }
+
+    ion-tab-button {
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    ion-tab-button[tab=login] {
+        margin-bottom: 0.5rem;
+    }
+
+    ion-icon {
+        margin: 0 1rem 0 0;
+    }
+
+    ion-label {
+        margin: 0;
+    }
+}
