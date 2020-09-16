@@ -1,4 +1,44 @@
-<!-- <img slot="bottom" src='assets/pic/background-sea.jpeg'> -->
+<div class='login_dashboard'>
+  <div class='top_dashboard'>
+    <div class='container'>
+      <div class='photo_icon'> </div>
+      <p class='login_title'>LOG IN</p>
+      <p class='login_tips'>Please enter your full name in small letters without space and your ID number for
+        authentication.</p>
+    </div>
+  </div>
+  <div class='bottom_dashboard'>
+    <p class='input_tag'>Name*</p>
+    <div>
+      <ion-input placeholder={{contents?.placeholder_password}}></ion-input>
+    </div>
+    <p class='input_tag'>Password*</p>
+    <div>
+      <ion-input placeholder={{contents?.placeholder_password}} type='password'></ion-input>
+    </div>
+    <p class='warning_tip' hidden>Username or Password wrong!</p>
+    <div class='login_condition'>
+      <ion-checkbox (ionChange)="toggleConfirmEnable()" color='dark'></ion-checkbox>
+      <p class='login_condition'>I AGREE WITH ALL <a>TERMS & CONDITIONS</a></p>
+    </div>
+    <ion-button color="dark" shape="round" disabled={{loginCondition}} (click)="triggerLogin()">CONFIRM</ion-button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <img slot="bottom" src='assets/pic/background-sea.jpeg'>
 <div class='daddy_justify_align'>
   <div role='title_part'>
     <p class='system_title'>{{contents?.system_name}}</p>
@@ -28,4 +68,4 @@
   <h6>
     Team Member: 徐敏杰
   </h6>
-</div>
+</div> -->

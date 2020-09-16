@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContentService } from '../content.service';
 
 @Component({
@@ -8,8 +9,10 @@ import { ContentService } from '../content.service';
 })
 export class LoginDashboardComponent implements OnInit {
   private contents;
+  private loginCondition: boolean = true;
   constructor(
-    private contentService: ContentService
+    private contentService: ContentService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -22,4 +25,11 @@ export class LoginDashboardComponent implements OnInit {
     this.contentService.setLocale(locale);
   }
 
+  toggleConfirmEnable() {
+    this.loginCondition = !this.loginCondition;
+  }
+
+  triggerLogin(){
+    this.router.navigate(['/homepage'])
+  }
 }

@@ -1,0 +1,19 @@
+<a routerLink='/homepage'>Back</a>
+<div class="container">
+  <p>HAN MEIMEI</p>
+  <div class='form'>
+    <ion-label>Phone Number</ion-label>
+    <ion-item>
+      <ion-input color="dark" value={{customerInfo.phone}} disabled={{inputEnable}}></ion-input>
+    </ion-item>
+    <ion-label>Email</ion-label>
+    <ion-item>
+      <ion-input color="dark" inputmode='email' disabled={{inputEnable}} value={{customerInfo.email}}></ion-input>
+    </ion-item>
+    <ion-label>ID</ion-label>
+    <ion-item>
+      <ion-input disabled value={{customerInfo.id}}></ion-input>
+    </ion-item>
+  </div>
+  <ion-button color="dark" shape="round" (click)="triggerLogin()">EDIT</ion-button>
+</div>

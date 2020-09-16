@@ -1,0 +1,73 @@
+.layer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    height: 100px;
+    align-items: center;
+}
+
+.body_container {
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.task_panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.nav_title {
+    font-family: BrandonGrotesque;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.nav_info {
+    font-family: BrandonGrotesque;
+    font-size: 22px;
+}
+
+.nav_info>a {
+    font-family: BrandonGrotesque;
+    font-size: 17px;
+    color: #000000;
+    margin-right: 50px;
+    text-decoration: underline;
+
+    &:first-child {
+        margin-right: 30px;
+    }
+}
+
+.instruction_container {
+    width: 350px;
+    font-family: BrandonGrotesque;
+    font-size: 16px;
+    text-align: left;
+    color: #2f2f2f;
+    opacity: 0.6;
+    height: 100%;
+}
+
+ion-button {
+    width: 355px;
+}
+
+.task_panel>div>p {
+    font-family: BrandonGrotesque;
+    font-size: 22px;
+    font-weight: bold;
+}
