@@ -29,7 +29,6 @@ export class ApiService {
       map(res => {
         if (_.get(res, 'desc') === 'authSuccess') {
           this.customerInfo = _.get(res, 'data');
-          debugger
           return true;
         }
         return false;

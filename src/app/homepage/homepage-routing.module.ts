@@ -22,7 +22,7 @@ const routes: Routes = [
             },
             {
                 path: 'exam',
-                loadChildren: () => import('../questions/questions-routing.module').then(m => m.QuestionsPageRoutingModule)
+                loadChildren: () => import('../questions/questions.module').then(m => m.QuestionsPageModule)
             },
             {
                 path: '',
