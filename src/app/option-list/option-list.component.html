@@ -1,0 +1,1 @@
+<app-toggle-button class="list-btn" *ngFor="let item of optionList.options;let i = index" [questionValue]="item.key" [switchValue]="item.checked" [title]="item.choice" (toggleValue)="getToggleValue($event)"></app-toggle-button>

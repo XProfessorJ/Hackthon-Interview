@@ -1,0 +1,64 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title size="25">logo</ion-title>
+
+
+  </ion-toolbar>
+  <div id="smallTitle">Progress</div>
+  <div class="header">
+    <ion-progress-bar slot="end" color="primary" [value]="(currentId+1)/questionlist.length"></ion-progress-bar>
+    <a href="#">111</a>
+    <a href="#">logout</a>
+  </div>
+</ion-header> -->
+<div>
+
+  <div class="time">
+    {{display}} / 60:00
+  </div>
+  <div >
+    <ion-card class="desc_box">
+      <ion-card-header class="round">
+        <ion-card-title class="ion-text-center">Section {{currentId+1}}</ion-card-title>
+        <div>{{currentId+1}}/{{totalCount}}</div>
+      </ion-card-header>
+      
+      <ion-card-content class="contents">
+        {{description}}
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+  <div [ngSwitch]="currentQuestions">
+    <div *ngSwitchCase="'CODING'" class=" textc" >
+      <ion-textarea placeholder="code entry box" [(ngModel)]="code"></ion-textarea>
+      <div class="textc upload"><div class="Upload-txt-pdf-excel">Upload: txt, pdf, excel</div></div>
+    </div>
+    <div *ngSwitchCase="'MULTY_CHOICE'" class="row">
+      <app-option-list [optionList]="optionList" (selectedValue)="getValue($event)">
+
+      </app-option-list>
+    </div>
+    <div *ngSwitchCase="'ESSAY'" class="row">
+      <ion-textarea placeholder="code entry box" [(ngModel)]="code"></ion-textarea>
+    </div>
+    <div *ngSwitchCase="'SINGLE_CHOICE'" class="row">
+      <app-option-list [optionList]="optionList" (selectedValue)="getValue($event)">
+
+      </app-option-list>
+    </div>
+    
+    
+  </div>
+<div slot="bottom" class="ion-align-self-center">
+  <ion-button (click)="last()" fill="solid" shape="round" color="dark" class="btnstyle">
+    <ion-icon slot="icon-only" name="play-back"></ion-icon>
+  </ion-button>
+  <ion-button class="confirmx" (click)="confirm()" fill="solid" shape="round" color="dark">
+    CONFIRM
+  </ion-button>
+  <ion-button (click)="next()" fill="solid" shape="round" color="dark" class="btnstyle">
+    <ion-icon slot="icon-only" name="play-forward"></ion-icon>
+  </ion-button>
+</div>
+</div>

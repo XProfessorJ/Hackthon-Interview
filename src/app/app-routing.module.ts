@@ -20,6 +20,9 @@ const routes: Routes = [
   {
     path: 'error',
     component: ErrorComponent
+  },{
+    path: 'question',
+    loadChildren: () => import('./questions/questions.module').then(m => m.QuestionsPageModule)
   }
 ];
 @NgModule({

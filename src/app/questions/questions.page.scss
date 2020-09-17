@@ -1,0 +1,189 @@
+
+
+ion-textarea {
+    max-width: 1000px;
+    width: 793px;
+    height: 144px;
+    border: 1px solid black;
+    
+}
+ion-card {
+    margin-top: 30px;
+    width: 650px;
+    height: 265px;
+    background: #f0f2f5;
+    border-radius: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.round{
+    padding: 32px 0 0 147px ;
+}
+.round ion-card-title{
+    text-align: inherit!important;
+}
+.contents{
+    padding-top: 20px;
+    padding-right: 147px;
+    padding-left: 147px;
+}
+ion-card div{
+    font-weight: bolder;
+    color: black;
+    font-size: 24px;
+}
+.textc{
+    width: 794px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+.upload{
+    width: 193px;
+    height: 48px;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+.Upload-txt-pdf-excel {
+    width: 153px;
+    height: 26px;
+    -webkit-text-stroke: 1px #707070;
+    font-family: BrandonGrotesque;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.89;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2f2f2f;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+.row{
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.header{
+    position: absolute;
+    left: 1000px;
+    top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 500px;
+    height: 20px;
+    z-index: 20;
+}
+
+ion-progress-bar{
+    border-radius: 50px;
+    width: 300px;
+    height: 30px;
+}
+
+.btnstyle{
+    border-radius: 50px;
+    width:40px;
+    height: 40px;
+    --padding-start: 0;
+    --padding-end: 0;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+ion-toolbar {
+    height: 100px;
+    --background: #f0f2f5; 
+    padding-top: 13px !important; 
+}
+
+
+a{
+    color: black;
+}
+
+.time{
+    position: relative;
+    float: right;
+    width: 112px;
+  height: 21px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -0.44px;
+  text-align: left;
+  color: #2e2e2e;
+  right: 71px;
+}
+#smallTitle{
+    position: absolute;
+    left: 1000px;
+    top: 12px;
+    z-index: 20;
+}
+ion-radio-group{
+    ion-item{
+        border-radius: 50px;
+        border: 1px solid black;
+    }
+}
+
+ion-toggle {
+    width: 200px;
+    height: 50px;
+    
+    --border: 1px solid black;
+    --handle-height:50px;
+    --handle-width:50px;
+    --border-radius: 25px;
+    
+}
+
+
+
+.selection{
+    position: absolute;
+    left: 28px;
+    top: 25px;
+    z-index: 20;
+    font-size: 22px;
+}
+
+.selectContent{
+    position: absolute;
+    left: 70px;
+    top: 25px;
+    z-index: 20;
+    font-size: 22px;
+}
+
+
+.ion-align-self-center{
+    text-align: center;
+    padding-top: 20px;
+}
+
+ion-button.confirmx{
+    height: 40px;
+    width: 152px;;
+    --border-radius: 15px;
+}
+
+ion-button :ng-deep button{
+    
+}

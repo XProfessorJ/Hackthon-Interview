@@ -21,6 +21,10 @@ const routes: Routes = [
                 loadChildren: () => import('../interview-dashboard/interview-dashboard.module').then(m => m.InterviewDashboardModule)
             },
             {
+                path: 'exam',
+                loadChildren: () => import('../questions/questions-routing.module').then(m => m.QuestionsPageRoutingModule)
+            },
+            {
                 path: '',
                 redirectTo: '/homepage/interview/review',
                 pathMatch: 'full'
