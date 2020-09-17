@@ -1,6 +1,6 @@
 <a routerLink='/homepage'>Back</a>
 <div class="container">
-  <p>HAN MEIMEI</p>
+  <p>{{customerInfo.userName}}</p>
   <div class='form'>
     <ion-label>Phone Number</ion-label>
     <ion-item>
@@ -8,7 +8,8 @@
     </ion-item>
     <ion-label>Email</ion-label>
     <ion-item>
-      <ion-input color="dark" inputmode='email' disabled={{inputEnable}} [(ngModel)]="customerInfo.userEmail"></ion-input>
+      <ion-input color="dark" inputmode='email' disabled={{inputEnable}} [(ngModel)]="customerInfo.userEmail">
+      </ion-input>
     </ion-item>
     <ion-label>ID</ion-label>
     <ion-item>

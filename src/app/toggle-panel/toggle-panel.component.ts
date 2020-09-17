@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-panel',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TogglePanelComponent implements OnInit {
   private panelToggle: boolean = false;
+  @Input() customer;
 
   constructor() { }
 

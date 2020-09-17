@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class ApiService {
   private url = 'http://127.0.0.1:8080';
   private customerInfo;
+  private intervieweeInfo;
+  private intervieweeList: any[] = [];
   private httpOptions = {
     headers: new HttpHeaders({
       'content-Type': 'application/json',
@@ -21,9 +23,11 @@ export class ApiService {
   constructor(
     private httpClient: HttpClient
   ) { }
+
   getCustomerInfo() {
     return this.customerInfo;
   }
+
   login(body): Observable<any> {
     return this.httpClient.post(this.url + '/user/auth', body, this.httpOptions).pipe(
       map(res => {
@@ -50,6 +54,7 @@ export class ApiService {
     return this.httpClient.get(this.url + '/token/' + token).pipe(
       map(res => {
         if (_.get(res, 'desc') === 'authSuccess') {
+          this.customerInfo = _.get(res, 'data');
           return true;
         }
         return false;
@@ -65,6 +70,14 @@ export class ApiService {
         }
         return false;
       })
+    );
+  }
+
+  getCandidate() {
+    return this.httpClient.get(this.url + '/user/candidate').pipe(
+      map(
+        res => _.get(res, 'data')
+      )
     );
   }
 }

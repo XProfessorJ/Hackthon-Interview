@@ -13,12 +13,17 @@ export class LinkGenerationComponent implements OnInit {
   private phone: string;
   private email: string;
   private toastInfo: string;
+  public intervieweeList: any;
   constructor(
     private apiService: ApiService
   ) { }
 
   ngOnInit(
-  ) { }
+  ) {
+    this.apiService.getCandidate().subscribe(
+      data => { this.intervieweeList = data }
+    );
+  }
 
   triggerAddPanel() {
     this.addContainerToggle = !this.addContainerToggle;
@@ -38,6 +43,7 @@ export class LinkGenerationComponent implements OnInit {
           setTimeout(() => {
             this.addContainerToggle = !this.addContainerToggle;
             this.toastInfo = '';
+            location.reload();
           }, 2000)
         }
       }

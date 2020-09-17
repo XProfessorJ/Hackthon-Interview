@@ -9,10 +9,6 @@ const routes: Routes = [
         component: HomepageComponent,
         children: [
             {
-                path: 'instruction/:token',
-                loadChildren: () => import('../instruction/instruction.module').then(m => m.InstructionModule)
-            },
-            {
                 path: 'customerInfo',
                 loadChildren: () => import('../customer-info/customer-info.module').then(m => m.CustomerInfoModule)
             },
@@ -23,6 +19,10 @@ const routes: Routes = [
             {
                 path: 'exam',
                 loadChildren: () => import('../questions/questions.module').then(m => m.QuestionsPageModule)
+            },
+            {
+                path: ':token',
+                loadChildren: () => import('../instruction/instruction.module').then(m => m.InstructionModule)
             },
             {
                 path: '',

@@ -1,5 +1,6 @@
+import { PlatformLocation } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -11,12 +12,28 @@ export class HomepageComponent implements OnInit {
   private customerInfo;
   constructor(
     private router: Router,
-    private apiService: ApiService
+    private route: ActivatedRoute,
+    private apiService: ApiService,
+    private location: PlatformLocation,
   ) { }
 
   ngOnInit() {
-    this.customerInfo = this.apiService.getCustomerInfo();
-  } 
+    // const token = this.route.snapshot.paramMap.get('token');
+    const token = this.location['location'].pathname.replace('/homepage/', '');
+    if (token && token != "interview/review") {
+      this.apiService.tokenAuth(token).subscribe(
+        flag => {
+          this.customerInfo = this.apiService.getCustomerInfo();
+          if (!flag) {
+            this.router.navigate(['/error'])
+          }
+        }
+      );
+    }
+    else {
+      this.customerInfo = this.apiService.getCustomerInfo();
+    }
+  }
 
   triggerConfrim() {
     this.router.navigate(['/customer-info'])
