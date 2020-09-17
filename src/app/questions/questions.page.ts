@@ -19,6 +19,7 @@ export class QuestionsPage implements OnInit {
   textValue: string = "GGG";
   public time: number = 0;
   public display = "00:00";
+  progressValue:number =0;
   questionlist: any;
   constructor(private apiService: ApiService, private router:Router,private toastContoller: ToastController) {}
   totalCount = 0;
@@ -62,7 +63,8 @@ export class QuestionsPage implements OnInit {
       console.log(res)
       this.questionlist = res;
       this.totalCount = this.questionlist.length;
-
+       this.progressValue = 1/this.totalCount ;
+      // console.log("value:" , this.progressValue)
       this.optionList.description = this.questionlist[
         this.currentId
       ].description;
@@ -104,6 +106,7 @@ export class QuestionsPage implements OnInit {
   }
 
   check() {
+    
     var flag: boolean = false;
     for (var i = 0; i < this.result.answerList.length; i++) {
       if (this.result.answerList[i].qId == this.value.qId) {
@@ -130,8 +133,10 @@ export class QuestionsPage implements OnInit {
     }else{
       this.finalStep =false;
     }
-    if (this.currentId < 0) {
+    
+    if (this.currentId <0) {
       this.currentId++;
+      
     } else {
       this.optionList.description = this.questionlist[
         this.currentId
@@ -149,6 +154,7 @@ export class QuestionsPage implements OnInit {
 
       this.description = this.questionlist[this.currentId].description;
     }
+    this.progressValue = (this.currentId+1)/this.totalCount ;
     this.getTextValue(this.currentId)
   }
 
@@ -171,8 +177,13 @@ export class QuestionsPage implements OnInit {
   }
   next() {
     this.confirm() ;
-    console.log("next",this.currentId)
+    
     this.currentId++;
+    if(this.currentId==this.questionlist.length){
+      this.currentId =0;
+    }
+    console.log("next",this.currentId)
+    this.progressValue = (this.currentId+1)/this.totalCount ;
     if(this.currentId ==this.totalCount-1){
       this.finalStep =true;
     }else{

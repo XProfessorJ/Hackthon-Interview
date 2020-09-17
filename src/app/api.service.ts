@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = 'http://127.0.0.1:8080';
+  private url = 'http://127.0.0.1:8023';
   private customerInfo;
   private intervieweeInfo;
   private intervieweeList: any[] = [];
