@@ -1,0 +1,43 @@
+<div class='container'>
+  <div class='interviewee_cell'>
+    <div class='username'>
+      <p>Han Meimei</p>
+    </div>
+    <p>2020-07—21 22:02</p>
+    <div class='button_list'>
+      <p (click)='togglePanel()'>View</p>
+      <p (click)='togglePanel()'>Edit</p>
+      <p (click)='togglePanel()'> Delete</p>
+    </div>
+  </div>
+  <div class='info_panel' *ngIf='panelToggle'>
+    <div class='input_cell'>
+      <p>ID Card:</p>
+      <ion-item color='f1f1f1'>
+        <ion-input size='40'></ion-input>
+      </ion-item>
+    </div>
+    <div class='input_cell'>
+      <p>Phone:</p>
+      <ion-item color='f1f1f1'>
+        <ion-input size='40'></ion-input>
+      </ion-item>
+    </div>
+    <div class='input_cell'>
+      <p>Email:</p>
+      <ion-item color='f1f1f1'>
+        <ion-input size='40'></ion-input>
+      </ion-item>
+    </div>
+    <div class='input_cell'>
+      <p>Test:</p>
+      <ion-item color='f1f1f1'>
+        <ion-input size='40'></ion-input>
+      </ion-item>
+    </div>
+    <div class='button_cell'>
+      <ion-button color="dark" shape="round">ADD</ion-button>
+      <ion-button color="dark" shape="round" (click)="triggerAddPanel()">CANCEL</ion-button>
+    </div>
+  </div>
+</div>

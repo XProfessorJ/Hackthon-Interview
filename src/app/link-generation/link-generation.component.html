@@ -4,16 +4,8 @@
       <p>Link Generation</p>
       <ion-button color="dark" shape="round" (click)="triggerAddPanel()">ADD</ion-button>
     </div>
-    <div class='interviewee_cell'>
-      <div class='username'>
-        <p>Han Meimei</p>
-      </div>
-      <div class='button_list'>
-        <p>View</p>
-        <p>Edit</p>
-        <p>Delete</p>
-      </div>
-    </div>
+    <app-toggle-panel></app-toggle-panel>
+    <app-toggle-panel></app-toggle-panel>
     <div class='add_new_container' *ngIf="addContainerToggle">
       <p class='add_title'>Add new ineterviewee</p>
       <div class='input_cell'>
