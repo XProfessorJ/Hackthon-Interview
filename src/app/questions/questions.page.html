@@ -1,4 +1,4 @@
-<div>
+<div class="over">
   <div class="time">
     {{display}} / 60:00
   </div>
@@ -13,9 +13,10 @@
       </ion-card-content>
     </ion-card>
   </div>
+  
   <div [ngSwitch]="currentQuestions">
     <div *ngSwitchCase="'CODING'" class=" textc" >
-      <ion-textarea placeholder="code entry box" [(ngModel)]="code"></ion-textarea>
+      <ion-textarea  [(ngModel)]="code" value="textValue"></ion-textarea>
       <div class="textc upload"><div class="Upload-txt-pdf-excel">Upload: txt, pdf, excel</div></div>
     </div>
     <div *ngSwitchCase="'MULTY_CHOICE'" class="row">
@@ -23,7 +24,7 @@
       </app-option-list>
     </div>
     <div *ngSwitchCase="'ESSAY'" class="row">
-      <ion-textarea placeholder="code entry box" [(ngModel)]="code"></ion-textarea>
+      <ion-textarea [(ngModel)]="code" value="textValue"></ion-textarea>
     </div>
     <div *ngSwitchCase="'SINGLE_CHOICE'" class="row">
       <app-option-list [optionList]="optionList" (selectedValue)="getValue($event)">
@@ -34,7 +35,7 @@
   <ion-button (click)="last()" fill="solid" shape="round" color="dark" class="btnstyle">
     <ion-icon slot="icon-only" name="play-back"></ion-icon>
   </ion-button>
-  <ion-button class="confirmx" (click)="confirm()" fill="solid" shape="round" color="dark">
+  <ion-button *ngIf="finalStep" class="confirmx" (click)="submit()" fill="solid" shape="round" color="dark">
     CONFIRM
   </ion-button>
   <ion-button (click)="next()" fill="solid" shape="round" color="dark" class="btnstyle">

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = 'http://127.0.0.1:8080';
+  private url = 'http://127.0.0.1:8023';
   private customerInfo;
   private intervieweeInfo;
   private intervieweeList: any[] = [];
@@ -79,5 +79,20 @@ export class ApiService {
         res => _.get(res, 'data')
       )
     );
+      }
+  getQuestionList(): Observable<any> {
+    return this.httpClient.get(this.url+'/quiz/list').pipe(
+      map(res =>{
+        return res;
+      })
+    )
+  }
+
+  submitAnswer(body): Observable<any>{
+    return this.httpClient.post(this.url+ '/quiz/answer',body,this.httpOptions).pipe(
+      map( res=>{
+        return res;
+      })
+    )
   }
 }

@@ -2,9 +2,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 510px;
     //min-width: 250px;
-    height: 40px;
+    height: 50px;
     border: 1px solid grey;
     border-radius: 40px;
     padding: 0 55px;
@@ -24,8 +24,8 @@
     left: -1px;
     right: 0;
     bottom: 0;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background-color: white;
     -webkit-transition: transform .4s;
     transition: transform .4s;
@@ -49,7 +49,7 @@
 }
 
 .container .switch-swapper input:checked  + .slider{
-    -webkit-transform: translateX(260px);
-    -ms-transform: translateX(260px);
-    transform: translateX(260px);
+    -webkit-transform: translateX(460px);
+    -ms-transform: translateX(460px);
+    transform: translateX(460px);
 }
