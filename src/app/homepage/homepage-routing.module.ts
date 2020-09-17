@@ -21,7 +21,7 @@ const routes: Routes = [
                 loadChildren: () => import('../questions/questions.module').then(m => m.QuestionsPageModule)
             },
             {
-                path: ':token',
+                path: 'exam/:token',
                 loadChildren: () => import('../instruction/instruction.module').then(m => m.InstructionModule)
             },
             {

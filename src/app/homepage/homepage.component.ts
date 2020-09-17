@@ -20,7 +20,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     // const token = this.route.snapshot.paramMap.get('token');
     const token = this.location['location'].pathname.replace('/homepage/', '');
-    if (token && token != "interview/review") {
+    if (token && token != "interview/review" && token != "interview/link-generation") {
       this.apiService.tokenAuth(token).subscribe(
         flag => {
           this.customerInfo = this.apiService.getCustomerInfo();

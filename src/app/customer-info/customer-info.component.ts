@@ -16,6 +16,7 @@ export class CustomerInfoComponent implements OnInit {
 
   ngOnInit() {
     this.customerInfo = this.apiService.getCustomerInfo();
+    debugger
   }
 
   trggerInput() {
@@ -25,7 +26,7 @@ export class CustomerInfoComponent implements OnInit {
       const customerInfo = {
         "id": this.customerInfo.userId,
         "userEmail": this.customerInfo.userEmail,
-        "userPhone": this.customerInfo.UserPhonephone
+        "userPhone": this.customerInfo.userPhone
       }
       this.apiService.updateInfo(customerInfo).subscribe(
         flag => {

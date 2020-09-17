@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = 'http://127.0.0.1:8023';
+  private url = 'http://127.0.0.1:8080';
   private customerInfo;
   private intervieweeInfo;
   private intervieweeList: any[] = [];
@@ -24,6 +24,9 @@ export class ApiService {
     private httpClient: HttpClient
   ) { }
 
+  getIntervieweeList(){
+    return this.intervieweeList;
+  }
   getCustomerInfo() {
     return this.customerInfo;
   }
@@ -76,7 +79,7 @@ export class ApiService {
   getCandidate() {
     return this.httpClient.get(this.url + '/user/candidate').pipe(
       map(
-        res => _.get(res, 'data')
+        res => this.intervieweeList = _.get(res, 'data')
       )
     );
       }

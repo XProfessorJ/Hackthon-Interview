@@ -15,13 +15,15 @@ export class LinkGenerationComponent implements OnInit {
   private toastInfo: string;
   public intervieweeList: any;
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
   ) { }
 
   ngOnInit(
   ) {
     this.apiService.getCandidate().subscribe(
-      data => { this.intervieweeList = data }
+      () => {
+        this.intervieweeList = this.apiService.getIntervieweeList()
+      }
     );
   }
 
