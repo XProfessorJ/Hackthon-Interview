@@ -15,12 +15,12 @@ export class QuestionsPage implements OnInit {
   };
 
   public time:number=0;
-  public display;
+  public display ='00:00';
 
   constructor() {
     
   }
-
+  totalCount =0;
   format(num:number){
     if(num<10){
       return "0"+num;
@@ -30,6 +30,7 @@ export class QuestionsPage implements OnInit {
   }
 
   ngOnInit() {
+    this.totalCount= this.questionlist.length;
     
     setInterval(()=>{
        this.time++;
@@ -53,16 +54,16 @@ export class QuestionsPage implements OnInit {
     {
       questiontype: "MULTY_CHOICE",
       description:
-        "Which three guidelines are used to protect confidential information? (Choose three)",
+        "Which three guidelines are used to ",//protect confidential information? (Choose three)
       qId: "1144115b-9634-4fac-85a2-82190c4b3262",
       options: [
         {
           key: "A",
-          choice: "Limit access to objects holding confidential information",
+          choice: "Limit access to objects",// holding confidential information
         },
         {
           key: "B",
-          choice: "Clearly identify and label confidential information.",
+          choice: "Clearly identify and ",//label confidential information.
         },
         { key: "C", choice: "333" },
         { key: "D", choice: "444" },
@@ -90,7 +91,7 @@ export class QuestionsPage implements OnInit {
         "Implement an algorithm to sort a linked list by using Quick Sort. Any existing implementation is not allowed to user.",
     },
   ];
-
+  
   public currentQuestions: string = this.questionlist[this.currentId]
     .questiontype;
   public description: string = this.questionlist[this.currentId].description;

@@ -2,17 +2,70 @@
 
 ion-textarea {
     max-width: 1000px;
-    height: 200px;
+    width: 793px;
+    height: 144px;
     border: 1px solid black;
     
 }
 ion-card {
     margin-top: 30px;
-    width: 1000px;
-    height: 200px;
+    width: 650px;
+    height: 265px;
     background: #f0f2f5;
     border-radius: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
+.round{
+    padding: 32px 0 0 147px ;
+}
+.round ion-card-title{
+    text-align: inherit!important;
+}
+.contents{
+    padding-top: 20px;
+    padding-right: 147px;
+    padding-left: 147px;
+}
+ion-card div{
+    font-weight: bolder;
+    color: black;
+    font-size: 24px;
+}
+.textc{
+    width: 794px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+.upload{
+    width: 193px;
+    height: 48px;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+.Upload-txt-pdf-excel {
+    width: 153px;
+    height: 26px;
+    -webkit-text-stroke: 1px #707070;
+    font-family: BrandonGrotesque;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.89;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2f2f2f;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 .row{
     display: flex;
     flex-direction: row;
@@ -47,8 +100,8 @@ ion-progress-bar{
     height: 40px;
     --padding-start: 0;
     --padding-end: 0;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 ion-toolbar {
@@ -63,9 +116,19 @@ a{
 }
 
 .time{
-    position: absolute;
-    top: 35px;
-    right: 65px;
+    position: relative;
+    float: right;
+    width: 112px;
+  height: 21px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -0.44px;
+  text-align: left;
+  color: #2e2e2e;
+  right: 71px;
 }
 #smallTitle{
     position: absolute;
@@ -110,5 +173,17 @@ ion-toggle {
 }
 
 
+.ion-align-self-center{
+    text-align: center;
+    padding-top: 20px;
+}
 
+ion-button.confirmx{
+    height: 40px;
+    width: 152px;;
+    --border-radius: 15px;
+}
 
+ion-button :ng-deep button{
+    
+}

@@ -2,8 +2,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: auto;
-    min-width: 250px;
+    width: 300px;
+    //min-width: 250px;
     height: 40px;
     border: 1px solid grey;
     border-radius: 40px;
@@ -49,7 +49,7 @@
 }
 
 .container .switch-swapper input:checked  + .slider{
-    -webkit-transform: translateX(210px);
-    -ms-transform: translateX(210px);
-    transform: translateX(210px);
+    -webkit-transform: translateX(260px);
+    -ms-transform: translateX(260px);
+    transform: translateX(260px);
 }

@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title size="25">logo</ion-title>
 
@@ -10,26 +10,29 @@
     <a href="#">111</a>
     <a href="#">logout</a>
   </div>
-</ion-header>
+</ion-header> -->
+<div>
 
-<ion-content>
   <div class="time">
     {{display}} / 60:00
   </div>
-  <div class="row">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="ion-text-center">Round {{currentId+1}}</ion-card-title>
+  <div >
+    <ion-card class="desc_box">
+      <ion-card-header class="round">
+        <ion-card-title class="ion-text-center">Section {{currentId+1}}</ion-card-title>
+        <div>{{currentId+1}}/{{totalCount}}</div>
       </ion-card-header>
-      <ion-card-content>
+      
+      <ion-card-content class="contents">
         {{description}}
       </ion-card-content>
 
     </ion-card>
   </div>
   <div [ngSwitch]="currentQuestions">
-    <div *ngSwitchCase="'CODING'" class="row">
+    <div *ngSwitchCase="'CODING'" class=" textc" >
       <ion-textarea placeholder="code entry box" [(ngModel)]="code"></ion-textarea>
+      <div class="textc upload"><div class="Upload-txt-pdf-excel">Upload: txt, pdf, excel</div></div>
     </div>
     <div *ngSwitchCase="'MULTY_CHOICE'" class="row">
       <app-option-list [optionList]="optionList" (selectedValue)="getValue($event)">
@@ -47,21 +50,15 @@
     
     
   </div>
-  
-
-  
-
-
-
-</ion-content>
 <div slot="bottom" class="ion-align-self-center">
   <ion-button (click)="last()" fill="solid" shape="round" color="dark" class="btnstyle">
     <ion-icon slot="icon-only" name="play-back"></ion-icon>
   </ion-button>
-  <ion-button (click)="confirm()" fill="solid" shape="round" color="dark">
+  <ion-button class="confirmx" (click)="confirm()" fill="solid" shape="round" color="dark">
     CONFIRM
   </ion-button>
   <ion-button (click)="next()" fill="solid" shape="round" color="dark" class="btnstyle">
     <ion-icon slot="icon-only" name="play-forward"></ion-icon>
   </ion-button>
+</div>
 </div>
