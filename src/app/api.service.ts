@@ -57,6 +57,7 @@ export class ApiService {
     return this.httpClient.get(this.url + '/token/' + token).pipe(
       map(res => {
         if (_.get(res, 'desc') === 'authSuccess') {
+          
           this.customerInfo = _.get(res, 'data');
           return true;
         }
