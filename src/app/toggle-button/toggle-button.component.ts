@@ -17,16 +17,25 @@ export class ToggleButtonComponent implements OnInit,OnChanges {
   @Input()
   questionValue = "";
   @ViewChild('label1') label; 
-  ngOnInit() {}
-  color ="white"
+  ngOnInit() {
+    if(this.switchValue){
+      //console.log(this.label.nativeElement)
+      this.color="grey"
+    }else{
+      this.color="white"
+    }
+  }
+  color ="white";
+  fcolor ="black"
   public switchButtonClick(): void {
-    // if(!this.switchValue){
-    //   console.log(this.label.nativeElement)
-    //   this.color="grey"
-    // }else{
-    //   this.color="white"
-    // }
-    //console.log(!this.switchValue);
+    if(!this.switchValue){
+      console.log(this.label.nativeElement)
+      this.color="grey";
+      this.fcolor = "white";
+    }else{
+      this.color="white";
+      this.fcolor ="black";
+    }
     this.toggleValue.emit({
       title: this.title,
       questionValue: this.questionValue,
@@ -34,12 +43,13 @@ export class ToggleButtonComponent implements OnInit,OnChanges {
     });
   }
   ngOnChanges(): void {
-    console.log("toggle changed.");
     if(this.label&&this.switchValue){
       console.log(this.label.nativeElement)
-      this.color="grey"
+      this.color="grey";
+      this.fcolor = "white";
     }else{
-      this.color="white"
+      this.color="white";
+      this.fcolor ="black"
     }
   }
 }

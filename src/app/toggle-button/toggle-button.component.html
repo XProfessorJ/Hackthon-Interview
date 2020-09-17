@@ -1,6 +1,6 @@
 <div class="container">
 
-  <label #label1 class="switch-swapper" [style.background-color]="color">
+  <label #label1 class="switch-swapper" [style.background-color]="color" [style.color]="fcolor">
     <div class="section">{{title}}</div>
     <input type="checkbox" (click) = "switchButtonClick()" [(ngModel)]="switchValue" [disabled]="toggleDisabled">
     <span class="slider">{{questionValue}}</span>
