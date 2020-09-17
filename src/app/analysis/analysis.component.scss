@@ -1,0 +1,79 @@
+.module_title {
+    width: 100%;
+    font-family: BrandonGrotesque;
+    font-size: 24px;
+    margin: 2rem 0;
+    color: #000000;
+}
+
+.section_cell {
+    width: 100%;
+}
+
+.section_title {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+p {
+    display: inline-block;
+    margin: 0;
+    width: 7rem;
+}
+
+.comment {
+    width: 90%;
+    height: 80px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
+
+.score_cell {
+    margin-bottom: 1rem;
+
+}
+
+.comment_cell {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.score_input {
+    width: 60px;
+    text-align: center;
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+    padding: 0 10vw;
+    overflow-y: scroll;
+}
+
+button {
+    width: 131px;
+    height: 45px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
+
+.button_list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.summary {
+    width: 100%;
+    height: 107px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
+
+.button_list {
+    margin-bottom: 1rem;
+
+    >div>button:not(:first-child) {
+        margin-left: 1rem;
+    }
+}

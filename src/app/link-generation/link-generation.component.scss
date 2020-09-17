@@ -1,0 +1,126 @@
+.layer {
+    height: 100vh;
+    display: flex;
+    width: 75vw;
+}
+
+.nav {
+    background-color: #888d8b;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+        text-decoration: underline;
+        margin: 1rem 0;
+        font-family: BrandonGrotesque;
+        font-size: 16px;
+        color: #000000;
+
+        &:first-child {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.content {
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    >p {
+        font-family: BrandonGrotesque;
+        font-size: 20px;
+        text-align: left;
+        color: #000000;
+        font-weight: bold;
+        text-decoration: underline;
+        width: 891px;
+    }
+}
+
+.interviewee_cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 56px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+
+}
+
+.username {
+    margin-left: 1rem;
+}
+
+p {
+    display: inline-block;
+}
+
+.button_list {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0 1rem;
+    }
+
+    p:hover {
+        text-decoration: underline;
+    }
+}
+
+.title_part {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    >p {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+    }
+}
+
+.add_new_container {
+    padding: 0 2rem;
+    width: 65%;
+    border: solid 1px #707070;
+    background-color: #f1f1f1;
+}
+
+ion-item {
+    display: inline-block;
+}
+
+.input_cell {
+    display: flex;
+    align-items: center;
+}
+
+.add_title {
+    font-family: BrandonGrotesque;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.42;
+    text-align: left;
+    color: #000000;
+}
+
+.button_cell {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 0;
+
+    >ion-button:first-child {
+        margin-right: 1rem;
+    }
+}
+
+.input_cell>p {
+    width: 5rem;
+}

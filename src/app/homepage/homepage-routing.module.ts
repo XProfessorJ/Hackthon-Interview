@@ -5,7 +5,7 @@ import { HomepageComponent } from '../homepage/homepage.component';
 
 const routes: Routes = [
     {
-        path: 'homepage',
+        path: '',
         component: HomepageComponent,
         children: [
             {
@@ -17,16 +17,15 @@ const routes: Routes = [
                 loadChildren: () => import('../customer-info/customer-info.module').then(m => m.CustomerInfoModule)
             },
             {
+                path: 'interview',
+                loadChildren: () => import('../interview-dashboard/interview-dashboard.module').then(m => m.InterviewDashboardModule)
+            },
+            {
                 path: '',
-                redirectTo: '/homepage/instruction',
+                redirectTo: '/homepage/interview/review',
                 pathMatch: 'full'
             }
         ]
-    },
-    {
-        path: '',
-        redirectTo: '/homepage',
-        pathMatch: 'full'
     }
 ];
 

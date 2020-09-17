@@ -4,12 +4,17 @@ import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login-dashboard',
     loadChildren: () => import('./login-dashboard/login-dashboard.module').then(m => m.LoginDashboardModule)
   },
   {
-    path: '',
+    path: 'homepage',
     loadChildren: () => import('./homepage/homepage.module').then(m => m.HomePageModule)
+  },
+  {
+    path: '',
+    redirectTo: '/login-dashboard',
+    pathMatch: 'full'
   }
 ];
 @NgModule({
