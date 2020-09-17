@@ -2,40 +2,49 @@
   <p class='module_title'>Ham Meimei</p>
   <div class='report_container'>
     <div class='section_cell'>
-      <p class= 'section_title'>Section A</p>
+      <p class= 'section_title'>Single Section</p>
       <div class='score_cell'>
-        <p>Score</p><input class='score_input'>
+        <p>Score</p><input class='score_input' #single>
       </div>
       <div class=' comment_cell'>
-        <p>Comment</p><input class='comment'>
+        <p>Comment</p><input class='comment' #c1>
       </div>
     </div>
     <div class='section_cell'>
-      <p class= 'section_title'>Section B</p>
+      <p class= 'section_title'>Multiple Section</p>
       <div class='score_cell'>
-        <p>Score</p><input class='score_input'>
+        <p>Score</p><input class='score_input'#multiple>
       </div>
       <div class='comment_cell'>
-        <p>Comment</p><input class='comment'>
+        <p>Comment</p><input class='comment' #c2>
       </div>
     </div>
     <div class='section_cell'>
-      <p class= 'section_title'>Section C</p>
+      <p class= 'section_title'>Coding</p>
       <div class='score_cell'>
-        <p>Score</p><input class='score_input'>
+        <p>Score</p><input class='score_input' #coding>
       </div>
       <div class=' comment_cell'>
-        <p>Comment</p><input class='comment'>
+        <p>Comment</p><input class='comment' #c3>
+      </div>
+    </div>
+    <div class='section_cell'>
+      <p class= 'section_title'>Essay</p>
+      <div class='score_cell'>
+        <p>Score</p><input class='score_input' #essay>
+      </div>
+      <div class=' comment_cell'>
+        <p>Comment</p><input class='comment' #c4>
       </div>
     </div>
     <p class= 'section_title'>Overall Comment</p>
-    <input class='summary'>
+    <input class='summary' #c5>
   </div>
   <div class='button_list'>
     <div>
-      <button> Save</button>
-      <button> Submit</button>
+      <button (click)="submit()"> Save</button>
+      <button (click)="submit()"> Submit</button>
     </div>
-    <button> Back</button>
+    <button (click)="back()"> Back</button>
   </div>
 </div>
