@@ -1,7 +1,6 @@
 <div class='login_dashboard'>
   <div class='top_dashboard'>
     <div class='container'>
-      <div class='photo_icon'> </div>
       <p class='login_title'>LOG IN</p>
       <p class='login_tips'>Please enter your full name in small letters without space and your ID number for
         authentication.</p>
@@ -10,13 +9,13 @@
   <div class='bottom_dashboard'>
     <p class='input_tag'>Name*</p>
     <div>
-      <ion-input placeholder={{contents?.placeholder_password}}></ion-input>
+      <ion-input required [(ngModel)]='name' placeholder={{contents?.placeholder_password}}></ion-input>
     </div>
     <p class='input_tag'>Password*</p>
     <div>
-      <ion-input placeholder={{contents?.placeholder_password}} type='password'></ion-input>
+      <ion-input required placeholder={{contents?.placeholder_password}} [(ngModel)]='password' type='password'></ion-input>
     </div>
-    <p class='warning_tip' hidden>Username or Password wrong!</p>
+    <p class='warning_tip' *ngIf='warningEnable'>Username or Password wrong !</p>
     <div class='login_condition'>
       <ion-checkbox (ionChange)="toggleConfirmEnable()" color='dark'></ion-checkbox>
       <p class='login_condition'>I AGREE WITH ALL <a>TERMS & CONDITIONS</a></p>
@@ -24,14 +23,6 @@
     <ion-button color="dark" shape="round" disabled={{loginCondition}} (click)="triggerLogin()">CONFIRM</ion-button>
   </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 

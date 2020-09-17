@@ -9,7 +9,7 @@ const routes: Routes = [
         component: HomepageComponent,
         children: [
             {
-                path: 'instruction',
+                path: 'instruction/:token',
                 loadChildren: () => import('../instruction/instruction.module').then(m => m.InstructionModule)
             },
             {

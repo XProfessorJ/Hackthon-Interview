@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
@@ -15,6 +16,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/login-dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: 'error',
+    component: ErrorComponent
   }
 ];
 @NgModule({

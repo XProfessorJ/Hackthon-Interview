@@ -1,10 +1,13 @@
 <div class='layer'>
   <div class='nav_container'>
-    <p class='nav_title'>Interview System</p>
-    <div class = 'nav_info'>
-      <a routerLink='/homepage/customerInfo'>Han MEIMEI</a>
+    <div class='pic_title'>
+      <img src='/assets/pic/logo.svg'>
+      <p class='title'>RECRUIT S<a class="red_font">M</a>ART</p>
+    </div>
+    <div class='nav_info'>
+      <a routerLink='/homepage/customerInfo'>{{customerInfo.userName}}</a>
       <a routerLink='/login-dashboard'>Log out</a>
     </div>
   </div>
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>

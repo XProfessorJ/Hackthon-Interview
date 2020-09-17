@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-customer-info',
@@ -6,13 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-info.component.scss'],
 })
 export class CustomerInfoComponent implements OnInit {
-  private customerInfo = {
-    "phone":'123',
-    "email":"1502734680@11.com",
-    "id":"123123123"
+  private customerInfo;
+  private inputEnable: boolean = true;
+  private buttonTag: string = "EDIT";
+  constructor(
+    private apiService: ApiService
+  ) { }
+
+  ngOnInit() {
+    this.customerInfo = this.apiService.getCustomerInfo();
   }
-  constructor() { }
 
-  ngOnInit() {}
-
+  trggerInput() {
+    this.inputEnable = !this.inputEnable;
+    this.buttonTag = this.inputEnable ? "EDIT" : "SAVE";
+    if (this.inputEnable) {
+      const customerInfo = {
+        "id": this.customerInfo.userId,
+        "userEmail": this.customerInfo.userEmail,
+        "userPhone": this.customerInfo.UserPhonephone
+      }
+      this.apiService.updateInfo(customerInfo).subscribe(
+        flag => {
+          if (flag) {
+          }
+        }
+      )
+    }
+  }
 }

@@ -70,3 +70,25 @@ ion-button {
     font-size: 22px;
     font-weight: bold;
 }
+
+img {
+    width: 7rem;
+    margin: 1rem;
+}
+
+.red_font {
+    color: #9b2134;
+}
+
+.title {
+    font-family: BrandonGrotesque;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+}
+
+.pic_title {
+    display: flex;
+    align-items: center;
+}

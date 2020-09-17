@@ -11,17 +11,6 @@
     flex-direction: column;
     align-items: center;
 
-    a {
-        text-decoration: underline;
-        margin: 1rem 0;
-        font-family: BrandonGrotesque;
-        font-size: 16px;
-        color: #000000;
-
-        &:first-child {
-            margin-top: 2rem;
-        }
-    }
 }
 
 .content {
@@ -30,44 +19,14 @@
     display: flex;
     flex-direction: column;
 
-    >p {
-        font-family: BrandonGrotesque;
-        font-size: 20px;
-        text-align: left;
-        color: #000000;
-        font-weight: bold;
-        text-decoration: underline;
-        width: 891px;
-    }
 }
 
-.interviewee_cell {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 891px;
-    height: 56px;
-    border: solid 1px #707070;
-    background-color: #ffffff;
+ion-button {
+    font-size: x-small;
+    width: 90%;
+    margin: 1rem 0;
 
-}
-
-.username {
-    margin-left: 1rem;
-}
-
-p {
-    display: inline-block;
-}
-
-.button_list {
-    display: flex;
-    align-items: center;
-
-    p {
-        margin: 0 1rem;
-    }
-    p:hover{
-        text-decoration: underline;
+    &:first-child {
+        margin: 2rem 0 1rem 0;
     }
 }

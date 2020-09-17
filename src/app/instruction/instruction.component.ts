@@ -1,4 +1,7 @@
+import { PlatformLocation } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-instruction',
@@ -7,8 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructionComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: PlatformLocation,
+    private apiService: ApiService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const token = this.route.snapshot.paramMap.get('token');
+    if (token === 'error') {
+      this.router.navigate(['/error']);
+    }
+    this.apiService.tokenAuth(token).subscribe(
+      flag => {
+        if (!flag) {
+          this.router.navigate(['/error'])
+        }
+      }
+    );
+  }
 
 }
