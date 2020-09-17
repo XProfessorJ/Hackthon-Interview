@@ -95,4 +95,11 @@ export class ApiService {
       })
     )
   }
+  submitQuizScore(body): Observable<any>{
+    return this.httpClient.post(this.url+ '/quiz/update',body,this.httpOptions).pipe(
+      map( res=>{
+        return res;
+      })
+    )
+  }
 }

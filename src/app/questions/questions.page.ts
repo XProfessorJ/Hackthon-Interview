@@ -23,7 +23,7 @@ export class QuestionsPage implements OnInit {
   constructor(private apiService: ApiService, private router:Router,private toastContoller: ToastController) {}
   totalCount = 0;
   format(num: number) {
-    if (num < 3600) {
+    if (num < 10) {
       return "0" + num;
     } else {
       return num;
@@ -46,12 +46,13 @@ export class QuestionsPage implements OnInit {
   ngOnInit() {
     const intervalID = setInterval(() => {
       this.time++;
-      if (this.time == 10) {
+      if (this.time == 3600) {
         this.showToast();
         clearInterval(intervalID)
         // this.submit();
         // this.router.navigate(["/login-dashboard"]);
       }
+      
       this.display =
         this.format(Math.round(this.time / 60)) +
         ":" +
