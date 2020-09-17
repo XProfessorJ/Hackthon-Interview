@@ -15,6 +15,9 @@ const routes: Routes = [
     path: '',
     redirectTo: '/login-dashboard',
     pathMatch: 'full'
+  },{
+    path: 'question',
+    loadChildren: () => import('./questions/questions.module').then(m => m.QuestionsPageModule)
   }
 ];
 @NgModule({
