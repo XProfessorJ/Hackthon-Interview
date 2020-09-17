@@ -9,6 +9,7 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ["./questions.page.scss"],
 })
 export class QuestionsPage implements OnInit {
+ 
   public currentId: number = 0;
   public code: string;
 
@@ -45,6 +46,9 @@ export class QuestionsPage implements OnInit {
     options: [],
   };
   ngOnInit() {
+    const Userid = this.apiService.getCustomerInfo()['userId'];
+   // console.log("xxx",Userid)
+    this.result.userId =Userid;
     const intervalID = setInterval(() => {
       this.time++;
       if (this.time == 3600) {
@@ -209,6 +213,7 @@ export class QuestionsPage implements OnInit {
     this.apiService.submitAnswer(this.result).subscribe(
       res=>{
         console.log("submit: ",res);
+        this.showSuccessToast();
       }
     )
   }
@@ -225,6 +230,25 @@ export class QuestionsPage implements OnInit {
           handler: () => {
            this.submit();
         this.router.navigate(["/login-dashboard"]);
+          }
+        }
+      ]
+    });
+    toast.present();
+  }
+
+  async showSuccessToast(){
+    const toast = await this.toastContoller.create({
+      //header: 'Toast header',
+      message: 'Submit successfully! You can leave the page',
+      position: 'middle',
+      buttons: [
+         {
+          text: 'Got it!',
+          role: 'cancel',
+          handler: () => {
+            window.open('', '_self', '');
+            window.close();
           }
         }
       ]
