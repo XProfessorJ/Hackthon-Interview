@@ -6,7 +6,7 @@
 }
 ion-textarea {
     max-width: 1000px;
-    width: 793px;
+    width: 650px;
     height: 144px;
     border: 1px solid black;
     
@@ -19,8 +19,30 @@ ion-card {
     border-radius: 50px;
     left: 50%;
     transform: translateX(-50%);
+    margin-left: 0;
 
 }
+ion-card-content{
+    font-size: 18px;
+    color: black;
+}
+.Code-entry-box {
+    width: 133px;
+    height: 31px;
+    -webkit-text-stroke: 1px #707070;
+    font-family: BrandonGrotesque;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2f2f2f;
+    position: absolute;
+    bottom: 20px;
+    right: 180px;
+  }
 .round{
     padding: 32px 0 0 147px ;
 }
@@ -38,7 +60,7 @@ ion-card div{
     font-size: 24px;
 }
 .textc{
-    width: 794px;
+    width: 650px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);

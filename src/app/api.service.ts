@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = 'http://127.0.0.1:8023';
+  private url = 'http://127.0.0.1:8080';
   private customerInfo;
   private intervieweeInfo;
   private intervieweeList: any[] = [];
@@ -93,7 +93,7 @@ export class ApiService {
   }
 
   submitAnswer(body): Observable<any>{
-    return this.httpClient.post(this.url+ '/quiz/answer',body,this.httpOptions).pipe(
+    return this.httpClient.post(this.url+ '/quiz/answers',body,this.httpOptions).pipe(
       map( res=>{
         return res;
       })
