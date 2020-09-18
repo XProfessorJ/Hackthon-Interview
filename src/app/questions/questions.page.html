@@ -23,7 +23,9 @@
   
   <div [ngSwitch]="currentQuestions">
     <div *ngSwitchCase="'CODING'" class=" textc" >
-      <ion-textarea  [(ngModel)]="code" value="textValue"></ion-textarea>
+      <ion-textarea  [(ngModel)]="code" value="textValue">
+        <div class="Code-entry-box">Code entry box</div>
+      </ion-textarea>
       <div class="textc upload"><div class="Upload-txt-pdf-excel">Upload: txt, pdf, excel</div></div>
     </div>
     <div *ngSwitchCase="'MULTY_CHOICE'" class="row">
